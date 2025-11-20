@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "projects": "Tech-Projekte",
+    "videography": "Videografie",
+    "photography": "Fotografie"
+  },
+  "hero": {
+    "title": "Hey, willkommen auf meiner Website!",
+    "text": "Ich bin Luca. Unter der Woche arbeite ich als Java Software Engineer – am Wochenende bin ich Abenteurer in den Schweizer Alpen, mit Kamera und Zelt, immer auf der Suche nach neuen Perspektiven."
+  },
+  "about": {
+    "subtitle": "Java Software Engineer & Bergliebhaber · Schweiz",
+    "ageLabel": "Alter",
+    "focusLabel": "Fokus",
+    "focusValue": "Reisen",
+    "hobbiesTitle": "Hobbys",
+    "connectTitle": "Kontakt",
+    "experienceTitle": "Berufserfahrung"
+  },
+  "photography": {
+    "title": "Fotografie",
+    "subtitle": "Einige Eindrücke von Wanderungen, Roadtrips und Surfspots, die ich besucht habe."
+  },
+  "projects": {
+    "title": "Tech-Projekte",
+    "nlp": {
+      "description": "Anwendung von NLP-Techniken auf Datensätze mit Freitext-Eingaben."
+    },
+    "webScraper": {
+      "description": "Dynamisches Web-Scraping-Tool für drei Schweizer E-Commerce-Plattformen mit Fokus auf Preis- und Produktauswertung."
+    }
+  },
+  "videos": {
+    "title": "Videografie",
+    "subtitle": "Reiseclips, Wanderungen und Surfsessions, die ich unterwegs gefilmt und geschnitten habe."
+  },
+ "experience": {
+  "javaSoftwareEngineer": {
+    "location": "SIX Group AG · Zürich, Schweiz",
+    "from": "April 2023",
+    "to": "Januar 2026",
+    "description": "Entwicklung von Backend-Services mit Java und Spring mit Fokus auf saubere Architektur, Tests, Performance und robuste Datenverarbeitung."
+  },
+  "masterAppliedDataScience": {
+    "location": "Universität Luzern · Luzern, Schweiz",
+    "from": "Februar 2024",
+    "to": "Januar 2026",
+    "description": "Vollzeit-Masterstudium bei gleichzeitiger 80%-Anstellung. Masterarbeit bei SIX Group AG zum Thema Ausreißererkennung in Finanzdaten mit Machine Learning."
+  },
+  "graduateProgram": {
+    "location": "SIX Group AG · Zürich, Schweiz",
+    "from": "Oktober 2021",
+    "to": "März 2023",
+    "description": "Rotationsprogramm bei SIX Group AG mit Einsätzen in verschiedenen Teams und Bereichen, Schwerpunkt auf Java/Spring-Backends."
+  }
+}
+
+}

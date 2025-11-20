@@ -1,18 +1,35 @@
 <div class="app">
   <header class="app-header">
     <div class="logo">
-      <span class="logo-mark">LR</span>
+
+<img src="assets/profile/profile.JPG" alt="Luca Renz" class="logo-photo" />
       <span class="logo-text">Luca Renz's Portfolio</span>
     </div>
 
-    <nav class="nav">
-      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        About
-      </a>
-      <a routerLink="projects" routerLinkActive="active">Tech Projects</a>
-      <a routerLink="videography" routerLinkActive="active">Videography</a>
-      <a routerLink="photography" routerLinkActive="active">Photography</a>
-    </nav>
+   <nav class="nav">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    {{ 'nav.about' | translate }}
+  </a>
+  <a routerLink="projects" routerLinkActive="active">
+    {{ 'nav.projects' | translate }}
+  </a>
+  <a routerLink="videography" routerLinkActive="active">
+    {{ 'nav.videography' | translate }}
+  </a>
+  <a routerLink="photography" routerLinkActive="active">
+    {{ 'nav.photography' | translate }}
+  </a>
+</nav>
+
+
+    <div class="lang-switch">
+    <button (click)="switchLang('en')" [class.active]="(translate.currentLang || 'en') === 'en'">
+      EN
+    </button>
+    <button (click)="switchLang('de')" [class.active]="translate.currentLang === 'de'">
+      DE
+    </button>
+  </div>
   </header>
 
   <main class="app-main">

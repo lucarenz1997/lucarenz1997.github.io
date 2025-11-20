@@ -1,32 +1,26 @@
 <section class="about">
-<div class="hero">
-  <img src="assets/profile/profile.JPG" alt="Profile" class="hero-photo" />
+  <div class="hero">
+    <img src="assets/profile/profile.JPG" alt="Profile" class="hero-photo" />
 
-  <div class="hero-text">
-    <h1>Hey, welcome to my website!</h1>
-    <p>
-      I'm Luca. During the week, I'm a Java Software Engineer —  
-      but on weekends I'm an adventurer wandering through the Swiss Alps  
-      with my camera gear and tent, always chasing new perspectives.
-    </p>
+    <div class="hero-text">
+      <h1>{{ "hero.title" | translate }}</h1>
+      <p>{{ "hero.text" | translate }}</p>
+    </div>
   </div>
-</div>
-
 
   <div class="intro-card">
     <div class="intro-text">
       <h1>{{ info.name }}</h1>
-      <p class="subtitle">{{ info.title }} · {{ info.location }}</p>
-    
+      <p class="subtitle">{{ "about.subtitle" | translate }}</p>
 
       <div class="meta">
         <div class="meta-item">
-          <span class="label">Age</span>
+          <span class="label">{{ "about.ageLabel" | translate }}</span>
           <span class="value">{{ info.age }}</span>
         </div>
         <div class="meta-item">
-          <span class="label">Focus</span>
-          <span class="value">Travel</span>
+         <span class="label">{{ 'about.focusLabel' | translate }}</span>
+      <span class="value">{{ 'about.focusValue' | translate }}</span>
         </div>
       </div>
     </div>
@@ -67,20 +61,25 @@
     </div>
   </div>
   <div class="cv-card">
-    <h2>Experience</h2>
+ <h2>{{ 'about.experienceTitle' | translate }}</h2>
 
     <div class="cv-list">
       <article class="cv-item" *ngFor="let exp of experiences">
         <div class="cv-header">
           <div>
             <h3>{{ exp.title }}</h3>
-            <p class="company">{{ exp.company }} · {{ exp.location }}</p>
+            <p class="company">
+ {{ exp.location | translate }}
+</p>
           </div>
-          <p class="dates">{{ exp.from }} – {{ exp.to }}</p>
+         
+<p class="dates">
+  {{ exp.from | translate }} – {{ exp.to | translate }}
+</p>
         </div>
 
         <p class="cv-description">
-          {{ exp.description }}
+          {{ exp.description | translate }}
         </p>
 
         <ul class="tags skill-tags" *ngIf="exp.skills && exp.skills.length">

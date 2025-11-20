@@ -1,5 +1,4 @@
-<h1>Projects</h1>
-
+<h1>{{ 'projects.title' | translate }}</h1>
 
 <article *ngFor="let project of projects" class="card">
   <div class="card-header">
@@ -9,7 +8,7 @@
 
     <div class="title-group">
       <h2>{{ project.name }}</h2>
-      <p class="description">{{ project.description }}</p>
+      <p class="description">{{ project.description | translate }}</p>
     </div>
   </div>
 

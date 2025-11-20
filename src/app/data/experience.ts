@@ -3,20 +3,20 @@ import { Technology } from './technology';
 export interface Experience {
   title: string;
   company: string;
-  location: string;
-  from: string; // you can keep these as strings like "2023" or "Jan 2024"
-  to: string; // or "Present"
+  location: string; // now: translation key
+  from: string; // now: translation key
+  to: string; // now: translation key
   skills: Technology[];
-  description: string;
+  description: string; // translation key
 }
 
 export const EXPERIENCES: Experience[] = [
   {
     title: 'Java Software Engineer',
     company: 'SIX Group AG',
-    location: 'Zurich, Switzerland',
-    from: 'April 2023',
-    to: 'January 2026',
+    location: 'experience.javaSoftwareEngineer.location',
+    from: 'experience.javaSoftwareEngineer.from',
+    to: 'experience.javaSoftwareEngineer.to',
     skills: [
       Technology.Docker,
       Technology.Java,
@@ -31,15 +31,14 @@ export const EXPERIENCES: Experience[] = [
       Technology.Oracle,
       Technology.PostgreSQL,
     ],
-    description:
-      'Working on backend services with Java and Spring, focusing on clean architecture, testing and performance.',
+    description: 'experience.javaSoftwareEngineer.description',
   },
   {
     title: 'Master in Applied Data Science and Information',
     company: 'University of Lucerne',
-    location: 'Lucerne, Switzerland',
-    from: 'February 2024',
-    to: 'Janaury 2026',
+    location: 'experience.masterAppliedDataScience.location',
+    from: 'experience.masterAppliedDataScience.from',
+    to: 'experience.masterAppliedDataScience.to',
     skills: [
       Technology.Python,
       Technology.BeautifulSoup,
@@ -50,15 +49,14 @@ export const EXPERIENCES: Experience[] = [
       Technology.Torch,
       Technology.MachineLearning,
     ],
-    description:
-      'Full-time Master Programme while working 80%. Master Thesis within SIX Group AG related to Outlier Detection with Financial Data using Machine Learning',
+    description: 'experience.masterAppliedDataScience.description',
   },
   {
     title: 'Graduate Programm',
     company: 'SIX Group AG',
-    location: 'Zurich, Switzerland',
-    from: 'October 2021',
-    to: 'March 2023',
+    location: 'experience.graduateProgram.location',
+    from: 'experience.graduateProgram.from',
+    to: 'experience.graduateProgram.to',
     skills: [
       Technology.Docker,
       Technology.Java,
@@ -71,7 +69,6 @@ export const EXPERIENCES: Experience[] = [
       Technology.Angular,
       Technology.React,
     ],
-    description:
-      'Working on backend services with Java and Spring, focusing on clean architecture, testing and performance.',
+    description: 'experience.graduateProgram.description',
   },
 ];

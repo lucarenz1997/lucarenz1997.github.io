@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Tech-Projects",
+    "videography": "Videography",
+    "photography": "Photography"
+  },
+  "hero": {
+    "title": "Hey, welcome to my website!",
+    "text": "I'm Luca. During the week, I'm a Java Software Engineer — but on weekends I'm an adventurer wandering through the Swiss Alps with my camera gear and tent, always chasing new perspectives."
+  },
+  "about": {
+    "subtitle": "Java Software Engineer & Mountain Enthusiast · Switzerland",
+    "ageLabel": "Age",
+    "focusLabel": "Focus",
+    "focusValue": "Travel",
+    "hobbiesTitle": "Hobbies",
+    "connectTitle": "Connect",
+    "experienceTitle": "Experience"
+  },
+  "photography": {
+    "title": "Photography",
+    "subtitle": "A few frames from hikes, road trips, and surf destinations that I’ve visited."
+  },
+  "projects": {
+    "title": "Tech-Projects",
+    "nlp": {
+      "description": "Applying NLP techniques to datasets containing free-text inputs."
+    },
+    "webScraper": {
+      "description": "Dynamic web scraping tool for three Swiss e-commerce platforms, focusing on price and product exploration."
+    }
+  },
+  "videos": {
+    "title": "Videography",
+    "subtitle": "Travel clips, hikes, and surf sessions that I’ve filmed and edited along the way."
+  },
+ "experience": {
+  "javaSoftwareEngineer": {
+    "location": "SIX Group AG · Zurich, Switzerland",
+    "from": "April 2023",
+    "to": "January 2026",
+    "description": "Working on backend services with Java and Spring, focusing on clean architecture, testing, performance, and reliable data processing."
+  },
+  "masterAppliedDataScience": {
+    "location": "University of Lucerne · Lucerne, Switzerland",
+    "from": "February 2024",
+    "to": "January 2026",
+    "description": "Full-time Master programme while working 80%. Master thesis within SIX Group AG on outlier detection in financial data using machine learning."
+  },
+  "graduateProgram": {
+    "location": "SIX Group AG · Zurich, Switzerland",
+    "from": "October 2021",
+    "to": "March 2023",
+    "description": "Rotational graduate programme at SIX Group AG with assignments in different teams and domains, focused on Java/Spring backends."
+  }
+}
+
+}
