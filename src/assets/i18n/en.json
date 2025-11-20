@@ -41,7 +41,9 @@
     "eda": "Exploratory Data Analysis",
     "modelEvaluation": "Model Evaluation",
     "research": "Research & Experimentation",
-    "projectManagement": "Project Management"
+    "projectManagement": "Project Management",
+    "timeseries": "Time Series",
+    "dataEngineering": "Data Engineering"
   },
 
   "general": {

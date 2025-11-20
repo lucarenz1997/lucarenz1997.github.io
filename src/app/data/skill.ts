@@ -11,4 +11,6 @@ export enum Skill {
   ResearchExperimentation = 'skill.research',
   Scraping = 'skill.scraping',
   ProjectManagement = 'skill.projectManagement',
+  TimeSeries = 'skill.timeseries',
+  DataEngineering = 'skill.dataEngineering',
 }

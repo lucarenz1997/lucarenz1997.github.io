@@ -21,6 +21,8 @@ export const EXPERIENCES: Experience[] = [
     from: 'experience.javaSoftwareEngineer.from',
     to: 'experience.javaSoftwareEngineer.to',
     technologies: [
+      Technology.Kubernetes,
+      Technology.OpenShift,
       Technology.Docker,
       Technology.Java,
       Technology.Spring,
@@ -69,6 +71,8 @@ export const EXPERIENCES: Experience[] = [
       Skill.ExploratoryDataAnalysis,
       Skill.ModelEvaluation,
       Skill.ResearchExperimentation,
+      Skill.TimeSeries,
+      Skill.DataEngineering,
     ],
     description: 'experience.masterAppliedDataScience.description',
     logo: 'assets/logos/hslu.svg',
@@ -80,6 +84,8 @@ export const EXPERIENCES: Experience[] = [
     from: 'experience.graduateProgram.from',
     to: 'experience.graduateProgram.to',
     technologies: [
+      Technology.Kubernetes,
+      Technology.OpenShift,
       Technology.Docker,
       Technology.Java,
       Technology.Spring,

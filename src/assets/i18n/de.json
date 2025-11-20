@@ -43,7 +43,9 @@
     "crossTeam": "Teamübergreifende Zusammenarbeit",
     "presentation": "Präsentationsfähigkeiten",
     "projectManagement": "Projektmanagement",
-    "teamwork": "Teamarbeit"
+    "teamwork": "Teamarbeit",
+    "timeseries": "Zeitreihen / Time Series",
+    "dataEngineering": "Datenengineering"
   },
   "general": {
     "showMore": "Mehr anzeigen",
