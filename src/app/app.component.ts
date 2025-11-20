@@ -13,9 +13,9 @@ export class AppComponent {
 
   // NEW: dynamic main layout class
   mainClass = 'app-main--about';
+  headerCollapsed = false;
 
   constructor(public translate: TranslateService, private router: Router) {
-    /* --- KEEPING YOUR ORIGINAL TRANSLATION LOGIC --- */
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
 
@@ -42,8 +42,11 @@ export class AppComponent {
       });
   }
 
-  /* Your original method, unchanged */
   switchLang(lang: 'en' | 'de') {
     this.translate.use(lang);
+  }
+
+  toggleHeader() {
+    this.headerCollapsed = !this.headerCollapsed;
   }
 }

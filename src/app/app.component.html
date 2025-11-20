@@ -1,43 +1,68 @@
 <div class="app">
-  <header class="app-header">
+  <header
+    class="app-header"
+    [class.is-collapsed]="headerCollapsed"
+  >
     <div class="logo">
-
-<img src="assets/profile/profile.webp" alt="Luca Renz" class="logo-photo" />
+      <img
+        src="assets/profile/profile.webp"
+        alt="Luca Renz"
+        class="logo-photo"
+      />
       <span class="logo-text">Luca Renz's Portfolio</span>
     </div>
 
-   <nav class="nav">
-  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    {{ 'nav.about' | translate }}
-  </a>
-  <a routerLink="projects" routerLinkActive="active">
-    {{ 'nav.projects' | translate }}
-  </a>
-  <a routerLink="videography" routerLinkActive="active">
-    {{ 'nav.videography' | translate }}
-  </a>
-  <a routerLink="photography" routerLinkActive="active">
-    {{ 'nav.photography' | translate }}
-  </a>
-</nav>
-
+    <nav class="nav" routerLinkActive="active">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ 'nav.about' | translate }}
+      </a>
+      <a routerLink="projects" routerLinkActive="active">
+        {{ 'nav.projects' | translate }}
+      </a>
+      <a routerLink="videography" routerLinkActive="active">
+        {{ 'nav.videography' | translate }}
+      </a>
+      <a routerLink="photography" routerLinkActive="active">
+        {{ 'nav.photography' | translate }}
+      </a>
+    </nav>
 
     <div class="lang-switch">
-    <button (click)="switchLang('en')" [class.active]="(translate.currentLang || 'en') === 'en'">
-      EN
+      <button
+        (click)="switchLang('en')"
+        [class.active]="(translate.currentLang || 'en') === 'en'"
+      >
+        EN
+      </button>
+      <button
+        (click)="switchLang('de')"
+        [class.active]="translate.currentLang === 'de'"
+      >
+        DE
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="header-toggle"
+      aria-label="Toggle header"
+      (click)="toggleHeader()"
+    >
+      <span *ngIf="headerCollapsed">▼</span>
+      <span *ngIf="!headerCollapsed">▲</span>
     </button>
-    <button (click)="switchLang('de')" [class.active]="translate.currentLang === 'de'">
-      DE
-    </button>
-  </div>
   </header>
 
-  <main class="app-main" [ngClass]="mainClass">
+  <main class="app-main">
     <router-outlet></router-outlet>
   </main>
 
   <footer class="app-footer">
-   <span>© {{ currentYear }} Luca Renz</span>
+    <span>© {{ currentYear }} Luca Renz</span>
     <span class="footer-right">Built with Angular</span>
   </footer>
 </div>
