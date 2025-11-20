@@ -1,0 +1,22 @@
+<section class="photos">
+  <header class="section-header">
+    <h1>Photography</h1>
+    <p>
+      A few frames from hikes, road trips, and surf destinations that I’ve visited.
+    </p>
+  </header>
+
+  <div class="photo-grid">
+    <figure *ngFor="let photo of photos" class="photo-card">
+      <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+      <figcaption>
+        <div class="caption-main">{{ photo.alt }}</div>
+        <div class="caption-sub">
+          <span *ngIf="photo.location">{{ photo.location }}</span>
+          <span *ngIf="photo.location && photo.year">·</span>
+          <span *ngIf="photo.year">{{ photo.year }}</span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>

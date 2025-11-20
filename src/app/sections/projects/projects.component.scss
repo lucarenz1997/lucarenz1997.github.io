@@ -1,0 +1,81 @@
+.section-header {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: #6b7280;
+    max-width: 540px;
+    font-size: 0.95rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  border-radius: 1.1rem;
+  padding: 1.25rem 1.4rem;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0.9rem;
+  }
+
+  .tech {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    li {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: #f9fafb;
+    }
+  }
+
+  .links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    a {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid #0f172a;
+      text-decoration: none;
+      color: #0f172a;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: #0f172a;
+        color: #f9fafb;
+      }
+    }
+  }
+}

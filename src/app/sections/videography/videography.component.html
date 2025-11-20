@@ -1,0 +1,29 @@
+<section class="videos">
+  <header class="section-header">
+    <h1>Videography</h1>
+    <p>
+      Travel clips, hikes, and surf sessions that I’ve filmed and edited along the way.
+    </p>
+  </header>
+
+  <div class="video-grid">
+    <article *ngFor="let v of videos" class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          [src]="v.url"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="info">
+        <h2>{{ v.title }}</h2>
+        <p class="meta" *ngIf="v.location || v.year">
+          <span *ngIf="v.location">{{ v.location }}</span>
+          <span *ngIf="v.location && v.year">·</span>
+          <span *ngIf="v.year">{{ v.year }}</span>
+        </p>
+      </div>
+    </article>
+  </div>
+</section>

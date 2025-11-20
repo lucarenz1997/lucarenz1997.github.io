@@ -1,0 +1,39 @@
+<section class="about">
+  <div class="intro-card">
+    <div class="intro-text">
+      <h1>{{ info.name }}</h1>
+      <p class="subtitle">
+        {{ info.title }} · {{ info.location }}
+      </p>
+      <p class="bio">
+        {{ info.bio }}
+      </p>
+
+      <div class="meta">
+        <div class="meta-item">
+          <span class="label">Age</span>
+          <span class="value">{{ info.age }}</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Focus</span>
+          <span class="value">Travel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <h2>Hobbies</h2>
+      <ul class="tags">
+        <li *ngFor="let hobby of info.hobbies">{{ hobby }}</li>
+      </ul>
+
+      <h2>Connect</h2>
+      <div class="social">
+        <a *ngIf="info.social.github" [href]="info.social.github" target="_blank">GitHub</a>
+        <a *ngIf="info.social.linkedin" [href]="info.social.linkedin" target="_blank">LinkedIn</a>
+        <a *ngIf="info.social.instagram" [href]="info.social.instagram" target="_blank">Instagram</a>
+        <a *ngIf="info.social.youtube" [href]="info.social.youtube" target="_blank">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
