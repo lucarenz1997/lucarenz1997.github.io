@@ -1,4 +1,5 @@
 import { Technology } from './technology';
+import { Skill } from './skill';
 
 export interface Experience {
   title: string;
@@ -6,7 +7,8 @@ export interface Experience {
   location: string;
   from: string;
   to: string;
-  skills: Technology[];
+  technologies: Technology[];
+  skills?: Skill[];
   description: string;
   logo?: string;
 }
@@ -18,7 +20,7 @@ export const EXPERIENCES: Experience[] = [
     location: 'experience.javaSoftwareEngineer.location',
     from: 'experience.javaSoftwareEngineer.from',
     to: 'experience.javaSoftwareEngineer.to',
-    skills: [
+    technologies: [
       Technology.Docker,
       Technology.Java,
       Technology.Spring,
@@ -31,6 +33,14 @@ export const EXPERIENCES: Experience[] = [
       Technology.JPA,
       Technology.Oracle,
       Technology.PostgreSQL,
+      Technology.SQL,
+    ],
+    skills: [
+      Skill.BusinessProcessManagement,
+      Skill.RequirementsEngineering,
+      Skill.StakeholderManagement,
+      Skill.AgileScrum,
+      Skill.TechnicalDocumentation,
     ],
     description: 'experience.javaSoftwareEngineer.description',
     logo: 'assets/logos/six.svg',
@@ -41,7 +51,7 @@ export const EXPERIENCES: Experience[] = [
     location: 'experience.masterAppliedDataScience.location',
     from: 'experience.masterAppliedDataScience.from',
     to: 'experience.masterAppliedDataScience.to',
-    skills: [
+    technologies: [
       Technology.Python,
       Technology.BeautifulSoup,
       Technology.Pandas,
@@ -49,7 +59,16 @@ export const EXPERIENCES: Experience[] = [
       Technology.Selenium,
       Technology.Spacy,
       Technology.Torch,
-      Technology.MachineLearning,
+      Technology.DataBricks,
+      Technology.SQL,
+    ],
+    skills: [
+      Skill.MachineLearning,
+      Skill.Scraping,
+      Skill.DataWrangling,
+      Skill.ExploratoryDataAnalysis,
+      Skill.ModelEvaluation,
+      Skill.ResearchExperimentation,
     ],
     description: 'experience.masterAppliedDataScience.description',
     logo: 'assets/logos/hslu.svg',
@@ -60,7 +79,7 @@ export const EXPERIENCES: Experience[] = [
     location: 'experience.graduateProgram.location',
     from: 'experience.graduateProgram.from',
     to: 'experience.graduateProgram.to',
-    skills: [
+    technologies: [
       Technology.Docker,
       Technology.Java,
       Technology.Spring,
@@ -71,6 +90,12 @@ export const EXPERIENCES: Experience[] = [
       Technology.Oracle,
       Technology.Angular,
       Technology.React,
+      Technology.SQL,
+    ],
+    skills: [
+      Skill.StakeholderManagement,
+      Skill.RequirementsEngineering,
+      Skill.AgileScrum,
     ],
     description: 'experience.graduateProgram.description',
     logo: 'assets/logos/six.svg',
@@ -81,16 +106,19 @@ export const EXPERIENCES: Experience[] = [
     location: 'experience.bachelor.location',
     from: 'experience.bachelor.from',
     to: 'experience.bachelor.to',
-    skills: [
-      Technology.Docker,
+    technologies: [
       Technology.Java,
       Technology.Spring,
       Technology.SpringBoot,
       Technology.GitLab,
       Technology.MySQL,
       Technology.JavaFX,
-      // Technology.BPMN,
-      // Technology.RE,
+      Technology.SQL,
+    ],
+    skills: [
+      Skill.BusinessProcessManagement,
+      Skill.RequirementsEngineering,
+      Skill.ProjectManagement,
     ],
     description: 'experience.bachelor.description',
     logo: 'assets/logos/fhnw.svg',

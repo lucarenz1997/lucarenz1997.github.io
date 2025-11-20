@@ -1,4 +1,49 @@
 {
+  "tech": {
+    "java": "Java",
+    "spring": "Spring",
+    "springBoot": "Spring Boot",
+    "jpa": "JPA",
+    "hibernate": "Hibernate",
+    "jcr": "JCR",
+    "kubernetes": "Kubernetes",
+    "openShift": "OpenShift",
+    "docker": "Docker",
+    "gitlab": "GitLab",
+    "oracle": "Oracle",
+    "mysql": "MySQL",
+    "javafx": "JavaFX",
+    "postgresql": "PostgreSQL",
+    "springAudit": "Spring Audit",
+    "springBatch": "Spring Batch",
+    "python": "Python",
+    "selenium": "Selenium",
+    "beautifulSoup": "BeautifulSoup",
+    "pandas": "Pandas",
+    "transformers": "Transformers",
+    "torch": "Torch",
+    "spacy": "spaCy",
+    "angular": "Angular",
+    "react": "React",
+    "databricks": "Databricks",
+    "sql": "SQL"
+  },
+  "skill": {
+     "machineLearning": "Machine Learning",
+    "scraping": "Scraping",
+    "bpm": "Business Process Management",
+    "re": "Requirements Engineering",
+    "stakeholderManagement": "Stakeholder Management",
+    "agileScrum": "Agile / Scrum",
+    "technicalDocumentation": "Technical Documentation",
+
+    "dataWrangling": "Data Wrangling",
+    "eda": "Exploratory Data Analysis",
+    "modelEvaluation": "Model Evaluation",
+    "research": "Research & Experimentation",
+    "projectManagement": "Project Management"
+  },
+
   "general": {
     "showMore": "Show more",
     "showLess": "Show less"
@@ -93,7 +138,7 @@
       "description": "Working on backend services with Java and Spring, focusing on clean architecture, testing, performance, and reliable data processing."
     },
     "masterAppliedDataScience": {
-      "title":"Master in Applied Information and Data Science",
+      "title": "Master in Applied Information and Data Science",
       "location": "University of Lucerne · Lucerne, Switzerland",
       "from": "February 2024",
       "to": "January 2026",
@@ -104,9 +149,9 @@
       "location": "SIX Group AG · Zurich, Switzerland",
       "from": "October 2021",
       "to": "March 2023",
-      "description": "Rotational graduate programme at SIX Group AG with assignments in different teams and domains such as Frontend (Angular, React), Backend (Java), IT-Architecture."
+      "description": "Rotational graduate programme at SIX Group AG with assignments in different teams and domains such as Frontend (Angular & React), Backend (Java) and IT-Architecture."
     },
-     "bachelor": {
+    "bachelor": {
       "title": "Bachelor of Science in Business Information Technology",
       "location": "University of Applied Sciences Northwestern Switzerland · Basel, Switzerland",
       "from": "September 2018",

@@ -91,23 +91,6 @@
     margin-bottom: 0.75rem;
   }
 
-  .tags {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-
-    li {
-      font-size: 0.8rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: #f9fafb;
-    }
-  }
-
   .social {
     display: flex;
     flex-wrap: wrap;
@@ -330,4 +313,49 @@
   height: 100%;
   background: linear-gradient(90deg, #0f172a, #64748b);
   transition: width 2s ease-out;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  li {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: #f9fafb;
+  }
+}
+
+/* Technologies = blue-ish */
+.tech-tags li {
+  background: #e0f2fe; /* light blue */
+  border-color: #38bdf8; /* cyan-400-ish */
+  color: #0369a1; /* blue text */
+}
+
+/* Skills = orange-ish */
+.skill-tags li {
+  background: #fff7ed; /* light orange */
+  border-color: #fb923c; /* orange-400-ish */
+  color: #c2410c; /* darker orange text */
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem; /* spacing between pills */
+}
+
+.tag-container .tags {
+  display: contents; // IMPORTANT: keeps LI pills in same flow
+}
+
+.tag-container .tags li {
+  margin: 0; // avoid double spacing
 }

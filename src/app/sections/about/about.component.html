@@ -23,40 +23,38 @@
           <span class="value">{{ "about.focusValue" | translate }}</span>
         </div>
       </div>
-<h2>{{ 'about.languagesTitle' | translate }}</h2>
+      <h2>{{ "about.languagesTitle" | translate }}</h2>
 
-<ul class="language-list">
-  <li *ngFor="let lang of languages; index as i">
-    <img
-      [src]="lang.flagSrc"
-      [alt]="(lang.nameKey | translate) + ' flag'"
-      class="flag-icon"
-    />
+      <ul class="language-list">
+        <li *ngFor="let lang of languages; index as i">
+          <img
+            [src]="lang.flagSrc"
+            [alt]="(lang.nameKey | translate) + ' flag'"
+            class="flag-icon"
+          />
 
-    <div class="language-content">
-      <div class="language-name">
-        {{ lang.nameKey | translate }}
-      </div>
+          <div class="language-content">
+            <div class="language-name">
+              {{ lang.nameKey | translate }}
+            </div>
 
-      <div class="language-level-row">
-        <span class="language-level-text">
-          {{ lang.levelKey | translate }}
-        </span>
-      </div>
-    </div>
+            <div class="language-level-row">
+              <span class="language-level-text">
+                {{ lang.levelKey | translate }}
+              </span>
+            </div>
+          </div>
 
-    <div class="level-bar">
-      <div
-        #langBar
-        class="level-bar-fill"
-        [attr.data-index]="i"
-        [style.width.%]="lang.visible ? lang.proficiency * 100 : 0"
-      ></div>
-    </div>
-  </li>
-</ul>
-
-
+          <div class="level-bar">
+            <div
+              #langBar
+              class="level-bar-fill"
+              [attr.data-index]="i"
+              [style.width.%]="lang.visible ? lang.proficiency * 100 : 0"
+            ></div>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="side-card">
@@ -64,7 +62,6 @@
       <ul class="tags">
         <li *ngFor="let hobby of info.hobbies">{{ hobby }}</li>
       </ul>
-
 
       <h2>Connect</h2>
       <div class="connect-list">
@@ -126,11 +123,22 @@
           {{ exp.description | translate }}
         </p>
 
-        <ul class="tags skill-tags" *ngIf="exp.skills && exp.skills.length">
-          <li *ngFor="let skill of exp.skills">
-            {{ skill }}
-          </li>
-        </ul>
+<div class="tag-container">
+  <ul class="tags tech-tags" *ngIf="exp.technologies?.length">
+    <li *ngFor="let tech of exp.technologies">
+      {{ tech | translate }}
+    </li>
+  </ul>
+
+  <ul class="tags skill-tags" *ngIf="exp.skills?.length">
+    <li *ngFor="let skill of exp.skills">
+      {{ skill | translate }}
+    </li>
+  </ul>
+</div>
+
+
+  
       </article>
     </div>
   </div>

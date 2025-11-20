@@ -1,4 +1,50 @@
 {
+  "tech": {
+    "java": "Java",
+    "spring": "Spring",
+    "springBoot": "Spring Boot",
+    "jpa": "JPA",
+    "hibernate": "Hibernate",
+    "jcr": "JCR",
+    "kubernetes": "Kubernetes",
+    "openShift": "OpenShift",
+    "docker": "Docker",
+    "gitlab": "GitLab",
+    "oracle": "Oracle",
+    "mysql": "MySQL",
+    "javafx": "JavaFX",
+    "postgresql": "PostgreSQL",
+    "springAudit": "Spring Audit",
+    "springBatch": "Spring Batch",
+    "python": "Python",
+    "selenium": "Selenium",
+    "beautifulSoup": "BeautifulSoup",
+    "pandas": "Pandas",
+    "transformers": "Transformers",
+    "torch": "Torch",
+    "spacy": "spaCy",
+    "angular": "Angular",
+    "react": "React",
+    "databricks": "Databricks",
+    "sql": "SQL"
+  },
+  "skill": {
+    "machineLearning": "Machine Learning",
+    "scraping": "Scraping",
+    "bpm": "Geschäftsprozessmanagement",
+    "re": "Requirements Engineering",
+    "stakeholderManagement": "Stakeholder-Management",
+    "agileScrum": "Agile / Scrum",
+    "technicalDocumentation": "Technische Dokumentation",
+    "dataWrangling": "Datenaufbereitung",
+    "eda": "Explorative Datenanalyse",
+    "modelEvaluation": "Modellbewertung",
+    "research": "Forschung & Experimente",
+    "crossTeam": "Teamübergreifende Zusammenarbeit",
+    "presentation": "Präsentationsfähigkeiten",
+    "projectManagement": "Projektmanagement",
+    "teamwork": "Teamarbeit"
+  },
   "general": {
     "showMore": "Mehr anzeigen",
     "showLess": "Weniger anzeigen"
@@ -86,34 +132,33 @@
     "subtitle": "Reiseclips, Wanderungen und Surfsessions, die ich unterwegs gefilmt und geschnitten habe."
   },
   "experience": {
-   "javaSoftwareEngineer": {
-  "title": "Java Software Engineer",
-  "location": "SIX Group AG · Zürich, Schweiz",
-  "from": "April 2023",
-  "to": "Januar 2026",
-  "description": "Arbeit an Backend-Services mit Java und Spring, mit Fokus auf Clean Architecture, Testing, Performance und zuverlässige Datenverarbeitung."
-},
-"masterAppliedDataScience": {
-  "title": "Master in Applied Information and Data Science",
-  "location": "Universität Luzern · Luzern, Schweiz",
-  "from": "Februar 2024",
-  "to": "Januar 2026",
-  "description": "Vollzeit-Masterstudium während einer 80%-Anstellung. Masterarbeit bei der SIX Group AG über Ausreißererkennung in Finanzdaten mittels Machine Learning."
-},
-"graduateProgram": {
-  "title": "Graduate Programm",
-  "location": "SIX Group AG · Zürich, Schweiz",
-  "from": "Oktober 2021",
-  "to": "März 2023",
-  "description": "Rotationsprogramm bei der SIX Group AG mit Einsätzen in verschiedenen Teams und Bereichen wie Frontend (Angular, React), Backend (Java) und IT-Architektur."
-},
-"bachelor": {
-  "title": "Bachelor of Science in Wirtschaftsinformatik",
-  "location": "Fachhochschule Nordwestschweiz · Basel, Schweiz",
-  "from": "September 2018",
-  "to": "September 2021",
-  "description": "Vollzeit-Bachelorstudium mit Austauschsemester in Spanien."
-}
-
+    "javaSoftwareEngineer": {
+      "title": "Java Software Engineer",
+      "location": "SIX Group AG · Zürich, Schweiz",
+      "from": "April 2023",
+      "to": "Januar 2026",
+      "description": "Arbeit an Backend-Services mit Java und Spring, mit Fokus auf Clean Architecture, Testing, Performance und zuverlässige Datenverarbeitung."
+    },
+    "masterAppliedDataScience": {
+      "title": "Master in Applied Information and Data Science",
+      "location": "Universität Luzern · Luzern, Schweiz",
+      "from": "Februar 2024",
+      "to": "Januar 2026",
+      "description": "Vollzeit-Masterstudium während einer 80%-Anstellung. Masterarbeit bei der SIX Group AG über Ausreißererkennung in Finanzdaten mittels Machine Learning."
+    },
+    "graduateProgram": {
+      "title": "Graduate Programm",
+      "location": "SIX Group AG · Zürich, Schweiz",
+      "from": "Oktober 2021",
+      "to": "März 2023",
+      "description": "Rotationsprogramm bei der SIX Group AG mit Einsätzen in verschiedenen Teams und Bereichen wie Frontend (Angular, React), Backend (Java) und IT-Architektur."
+    },
+    "bachelor": {
+      "title": "Bachelor of Science in Wirtschaftsinformatik",
+      "location": "Fachhochschule Nordwestschweiz · Basel, Schweiz",
+      "from": "September 2018",
+      "to": "September 2021",
+      "description": "Vollzeit-Bachelorstudium mit Austauschsemester in Spanien."
+    }
   }
 }
