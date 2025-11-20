@@ -1,4 +1,13 @@
 {
+    "photo":{
+         "filter": {
+      "all": "All"
+    },
+    "category": {
+      "mountains":"Mountains",
+      "portrait":"Portraits"
+    }
+  },
   "tech": {
     "java": "Java",
     "spring": "Spring",
