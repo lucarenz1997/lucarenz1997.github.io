@@ -1,4 +1,8 @@
 {
+  "general": {
+    "showMore": "Show more",
+    "showLess": "Show less"
+  },
   "nav": {
     "about": "About",
     "projects": "Tech-Projects",
@@ -10,50 +14,104 @@
     "text": "I'm Luca. During the week, I'm a Java Software Engineer — but on weekends I'm an adventurer wandering through the Swiss Alps with my camera gear and tent, always chasing new perspectives."
   },
   "about": {
-    "subtitle": "Java Software Engineer & Mountain Enthusiast · Switzerland",
+    "subtitle": "Java Software Engineer with strong Data and Business Background & Mountain Enthusiast · Switzerland",
     "ageLabel": "Age",
     "focusLabel": "Focus",
     "focusValue": "Travel",
     "hobbiesTitle": "Hobbies",
     "connectTitle": "Connect",
-    "experienceTitle": "Experience"
+    "experienceTitle": "Experience",
+    "languagesTitle": "Languages",
+    "languageGroups": {
+      "motherTongue": "Mother tongue",
+      "fluent": "Fluent",
+      "intermediate": "Intermediate"
+    },
+    "languages": {
+      "english": {
+        "name": "English",
+        "level": "Fluent"
+      },
+      "swiss-german": {
+        "name": "Swiss-German",
+        "level": "Mother tongue"
+      },
+      "german": {
+        "name": "German",
+        "level": "Mother tongue"
+      },
+      "spanish": {
+        "name": "Spanish",
+        "level": "Intermediate (B2)"
+      },
+      "french": {
+        "name": "French",
+        "level": "Oui"
+      }
+    }
   },
   "photography": {
     "title": "Photography",
     "subtitle": "A few frames from hikes, road trips, and surf destinations that I’ve visited."
   },
   "projects": {
+    "toGithub": "View on GitHub",
+    "tech": {
+      "programmingLanguages": "Programming languages",
+      "frameworks": "Frameworks",
+      "libraries": "Libraries",
+      "platforms": "Platforms"
+    },
+
     "title": "Tech-Projects",
+    "thesis": {
+      "description": "This master's thesis investigates methods for detecting outliers in regulatory data, focusing on improving data quality and identifying potential anomalies that may indicate reporting errors or irregularities. The study compares various statistical and machine learning approaches to assess their effectiveness and applicability in real-world regulatory contexts."
+    },
     "nlp": {
-      "description": "Applying NLP techniques to datasets containing free-text inputs."
+      "description": "This project explores key Natural Language Processing (NLP) techniques by implementing and evaluating models for text preprocessing, vectorization, classification, and sentiment analysis. It covers essential steps such as tokenization, stemming/lemmatization, stop-word removal, and feature extraction using methods like Bag-of-Words and TF-IDF. Several machine-learning algorithms are trained and compared to assess their performance across different NLP tasks. The repository serves as a compact, practical introduction to building end-to-end NLP pipelines, enabling efficient processing and interpretation of textual data."
     },
     "webScraper": {
-      "description": "Dynamic web scraping tool for three Swiss e-commerce platforms, focusing on price and product exploration."
+      "description": "This project provides a unified scraping framework with three dedicated scrapers for Interdiscount, Digitec, and Brack. Each scraper extracts product information directly from the respective website and consolidates all results into a single, structured DataFrame. The system enables efficient cross-platform price comparison and can be used to identify the cheapest available offer across the three Swiss retailers. The repository serves as a practical tool for automated data collection, market monitoring, and price-based decision making."
+    },
+    "recommender": {
+      "description": "This project developed and compared several music recommendation models for Deezer, starting with data exploration and cleaning, followed by implementing ALS, SVD, Neural Collaborative Filtering, and a Hybrid NCF model using additional metadata. After evaluating all models with F1-score, precision, and recall, SVD performed best, showing that a simple matrix-factorization approach can outperform more complex neural methods. The project also highlights the importance of richer metadata, solving cold-start issues, and improving user experience."
+    },
+    "timeSeries": {
+      "description": "The project analyzed whether U.S. electricity generation from natural gas, oil, and coal influences the futures prices of these commodities. After collecting and preprocessing monthly data, the time series were transformed for stationarity and modeled using VAR and Granger causality tests. The results showed no significant causal relationships, suggesting that futures prices are driven more by external market factors than by U.S. energy production."
     }
   },
   "videos": {
     "title": "Videography",
     "subtitle": "Travel clips, hikes, and surf sessions that I’ve filmed and edited along the way."
   },
- "experience": {
-  "javaSoftwareEngineer": {
-    "location": "SIX Group AG · Zurich, Switzerland",
-    "from": "April 2023",
-    "to": "January 2026",
-    "description": "Working on backend services with Java and Spring, focusing on clean architecture, testing, performance, and reliable data processing."
-  },
-  "masterAppliedDataScience": {
-    "location": "University of Lucerne · Lucerne, Switzerland",
-    "from": "February 2024",
-    "to": "January 2026",
-    "description": "Full-time Master programme while working 80%. Master thesis within SIX Group AG on outlier detection in financial data using machine learning."
-  },
-  "graduateProgram": {
-    "location": "SIX Group AG · Zurich, Switzerland",
-    "from": "October 2021",
-    "to": "March 2023",
-    "description": "Rotational graduate programme at SIX Group AG with assignments in different teams and domains, focused on Java/Spring backends."
+  "experience": {
+    "javaSoftwareEngineer": {
+      "title": "Java Software Engineer",
+      "location": "SIX Group AG · Zurich, Switzerland",
+      "from": "April 2023",
+      "to": "January 2026",
+      "description": "Working on backend services with Java and Spring, focusing on clean architecture, testing, performance, and reliable data processing."
+    },
+    "masterAppliedDataScience": {
+      "title":"Master in Applied Information and Data Science",
+      "location": "University of Lucerne · Lucerne, Switzerland",
+      "from": "February 2024",
+      "to": "January 2026",
+      "description": "Full-time Master programme while working 80%. Master thesis within SIX Group AG on outlier detection in financial data using machine learning."
+    },
+    "graduateProgram": {
+      "title": "Graduate Programme",
+      "location": "SIX Group AG · Zurich, Switzerland",
+      "from": "October 2021",
+      "to": "March 2023",
+      "description": "Rotational graduate programme at SIX Group AG with assignments in different teams and domains such as Frontend (Angular, React), Backend (Java), IT-Architecture."
+    },
+     "bachelor": {
+      "title": "Bachelor of Science in Business Information Technology",
+      "location": "University of Applied Sciences Northwestern Switzerland · Basel, Switzerland",
+      "from": "September 2018",
+      "to": "September 2021",
+      "description": "Full-time Bachelor Programme with exchange semester in Spain."
+    }
   }
-}
-
 }

@@ -3,17 +3,18 @@ import { Technology } from './technology';
 export interface Experience {
   title: string;
   company: string;
-  location: string; // now: translation key
-  from: string; // now: translation key
-  to: string; // now: translation key
+  location: string;
+  from: string;
+  to: string;
   skills: Technology[];
-  description: string; // translation key
+  description: string;
+  logo?: string;
 }
 
 export const EXPERIENCES: Experience[] = [
   {
-    title: 'Java Software Engineer',
-    company: 'SIX Group AG',
+    title: 'experience.javaSoftwareEngineer.title',
+    company: 'experience.javaSoftwareEngineer.company',
     location: 'experience.javaSoftwareEngineer.location',
     from: 'experience.javaSoftwareEngineer.from',
     to: 'experience.javaSoftwareEngineer.to',
@@ -32,10 +33,11 @@ export const EXPERIENCES: Experience[] = [
       Technology.PostgreSQL,
     ],
     description: 'experience.javaSoftwareEngineer.description',
+    logo: 'assets/logos/six.svg',
   },
   {
-    title: 'Master in Applied Data Science and Information',
-    company: 'University of Lucerne',
+    title: 'experience.masterAppliedDataScience.title',
+    company: 'experience.masterAppliedDataScience.company',
     location: 'experience.masterAppliedDataScience.location',
     from: 'experience.masterAppliedDataScience.from',
     to: 'experience.masterAppliedDataScience.to',
@@ -50,10 +52,11 @@ export const EXPERIENCES: Experience[] = [
       Technology.MachineLearning,
     ],
     description: 'experience.masterAppliedDataScience.description',
+    logo: 'assets/logos/hslu.svg',
   },
   {
-    title: 'Graduate Programm',
-    company: 'SIX Group AG',
+    title: 'experience.graduateProgram.title',
+    company: 'experience.graduateProgram.company',
     location: 'experience.graduateProgram.location',
     from: 'experience.graduateProgram.from',
     to: 'experience.graduateProgram.to',
@@ -70,5 +73,26 @@ export const EXPERIENCES: Experience[] = [
       Technology.React,
     ],
     description: 'experience.graduateProgram.description',
+    logo: 'assets/logos/six.svg',
+  },
+  {
+    title: 'experience.bachelor.title',
+    company: 'experience.bachelor.company',
+    location: 'experience.bachelor.location',
+    from: 'experience.bachelor.from',
+    to: 'experience.bachelor.to',
+    skills: [
+      Technology.Docker,
+      Technology.Java,
+      Technology.Spring,
+      Technology.SpringBoot,
+      Technology.GitLab,
+      Technology.MySQL,
+      Technology.JavaFX,
+      // Technology.BPMN,
+      // Technology.RE,
+    ],
+    description: 'experience.bachelor.description',
+    logo: 'assets/logos/fhnw.svg',
   },
 ];

@@ -19,10 +19,44 @@
           <span class="value">{{ info.age }}</span>
         </div>
         <div class="meta-item">
-         <span class="label">{{ 'about.focusLabel' | translate }}</span>
-      <span class="value">{{ 'about.focusValue' | translate }}</span>
+          <span class="label">{{ "about.focusLabel" | translate }}</span>
+          <span class="value">{{ "about.focusValue" | translate }}</span>
         </div>
       </div>
+<h2>{{ 'about.languagesTitle' | translate }}</h2>
+
+<ul class="language-list">
+  <li *ngFor="let lang of languages; index as i">
+    <img
+      [src]="lang.flagSrc"
+      [alt]="(lang.nameKey | translate) + ' flag'"
+      class="flag-icon"
+    />
+
+    <div class="language-content">
+      <div class="language-name">
+        {{ lang.nameKey | translate }}
+      </div>
+
+      <div class="language-level-row">
+        <span class="language-level-text">
+          {{ lang.levelKey | translate }}
+        </span>
+      </div>
+    </div>
+
+    <div class="level-bar">
+      <div
+        #langBar
+        class="level-bar-fill"
+        [attr.data-index]="i"
+        [style.width.%]="lang.visible ? lang.proficiency * 100 : 0"
+      ></div>
+    </div>
+  </li>
+</ul>
+
+
     </div>
 
     <div class="side-card">
@@ -30,6 +64,7 @@
       <ul class="tags">
         <li *ngFor="let hobby of info.hobbies">{{ hobby }}</li>
       </ul>
+
 
       <h2>Connect</h2>
       <div class="connect-list">
@@ -61,21 +96,30 @@
     </div>
   </div>
   <div class="cv-card">
- <h2>{{ 'about.experienceTitle' | translate }}</h2>
+    <h2>{{ "about.experienceTitle" | translate }}</h2>
 
     <div class="cv-list">
       <article class="cv-item" *ngFor="let exp of experiences">
         <div class="cv-header">
-          <div>
-            <h3>{{ exp.title }}</h3>
-            <p class="company">
- {{ exp.location | translate }}
-</p>
+          <div class="cv-left">
+            <img
+              *ngIf="exp.logo"
+              [src]="exp.logo"
+              [alt]="exp.company + ' logo'"
+              class="company-logo"
+            />
+
+            <div>
+              <h3>{{ exp.title | translate }}</h3>
+              <p class="company">
+                {{ exp.location | translate }}
+              </p>
+            </div>
           </div>
-         
-<p class="dates">
-  {{ exp.from | translate }} – {{ exp.to | translate }}
-</p>
+
+          <p class="dates">
+            {{ exp.from | translate }} – {{ exp.to | translate }}
+          </p>
         </div>
 
         <p class="cv-description">

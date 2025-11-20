@@ -1,4 +1,4 @@
-<h1>{{ 'projects.title' | translate }}</h1>
+<h1>{{ "projects.title" | translate }}</h1>
 
 <article *ngFor="let project of projects" class="card">
   <div class="card-header">
@@ -8,17 +8,102 @@
 
     <div class="title-group">
       <h2>{{ project.name }}</h2>
-      <p class="description">{{ project.description | translate }}</p>
+
+      <p class="description">
+        <!-- collapsed: translated + truncated -->
+        <span *ngIf="!project.expanded">
+          {{ project.description | translate | truncateWords : 50 }}
+        </span>
+
+        <!-- expanded: full translated text -->
+        <span *ngIf="project.expanded">
+          {{ project.description | translate }}
+        </span>
+      </p>
+
+     <button
+  class="toggle-btn"
+  *ngIf="project.hasMore"
+  (click)="toggle(project)"
+>
+  {{
+    project.expanded
+      ? ("general.showLess" | translate)
+      : ("general.showMore" | translate)
+  }}
+</button>
     </div>
   </div>
 
-  <ul class="tech">
-    <li *ngFor="let t of project.tech">{{ t }}</li>
-  </ul>
+  
+<div class="tech-grid">
+
+  <!-- Programming languages -->
+  <div class="tech-column" *ngIf="project.programmingLanguages?.length">
+    <div class="tech-heading">
+      <mat-icon class="tech-heading-icon">code</mat-icon>
+      <span>{{ 'projects.tech.programmingLanguages' | translate }}</span>
+    </div>
+    <div class="tags">
+      <span class="tag" *ngFor="let lang of project.programmingLanguages">
+        {{ lang }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Frameworks -->
+  <div class="tech-column" *ngIf="project.frameworks?.length">
+    <div class="tech-heading">
+      <mat-icon class="tech-heading-icon">layers</mat-icon>
+      <span>{{ 'projects.tech.frameworks' | translate }}</span>
+    </div>
+    <div class="tags">
+      <span class="tag" *ngFor="let fw of project.frameworks">
+        {{ fw }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <div class="tech-column" *ngIf="project.libraries?.length">
+    <div class="tech-heading">
+      <mat-icon class="tech-heading-icon">extension</mat-icon>
+      <span>{{ 'projects.tech.libraries' | translate }}</span>
+    </div>
+    <div class="tags">
+      <span class="tag" *ngFor="let lib of project.libraries">
+        {{ lib }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Platforms -->
+  <div class="tech-column" *ngIf="project.platforms?.length">
+    <div class="tech-heading">
+      <mat-icon class="tech-heading-icon">cloud</mat-icon>
+      <span>{{ 'projects.tech.platforms' | translate }}</span>
+    </div>
+    <div class="tags">
+      <span class="tag" *ngFor="let p of project.platforms">
+        {{ p }}
+      </span>
+    </div>
+  </div>
+</div>
 
   <div class="links">
-    <a *ngIf="project.github" [href]="project.github" target="_blank">
-      GitHub
+    <a
+      *ngIf="project.github"
+      [href]="project.github"
+      target="_blank"
+      class="github-link"
+    >
+      <img
+        src="assets/logos/github-mark.svg"
+        alt="GitHub"
+        class="github-icon"
+      />
+      {{ "projects.toGithub" | translate }}
     </a>
     <a *ngIf="project.link" [href]="project.link" target="_blank">
       Live Demo

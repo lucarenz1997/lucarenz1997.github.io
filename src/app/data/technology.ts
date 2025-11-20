@@ -10,6 +10,8 @@ export enum Technology {
   Docker = 'Docker',
   GitLab = 'GitLab',
   Oracle = 'Oracle',
+  MySQL = 'MySQL',
+  JavaFX = 'JavaFx',
   PostgreSQL = 'PostgreSQL',
   SpringAudit = 'Spring Audit',
   SpringBatch = 'Spring Batch',
@@ -24,4 +26,6 @@ export enum Technology {
   Scraping = 'Scraping',
   Angular = 'Angular',
   React = 'React',
+  RE = 'Requirements Engineering',
+  BPMN = 'Business Process Management',
 }

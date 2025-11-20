@@ -9,8 +9,8 @@
   }
 
   .hero-photo {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffffff;
@@ -160,7 +160,7 @@
 .connect-list img {
   width: 18px;
   height: 18px;
-  border-radius: 3px; // makes logos look clean
+  border-radius: 3px;
   object-fit: cover;
 }
 
@@ -246,4 +246,88 @@
   .dates {
     margin-top: 0.2rem;
   }
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cv-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.company-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 4px;
+  background: white;
+}
+.language-group {
+  margin-bottom: 1.2rem;
+}
+
+.language-group-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+.language-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.language-list li {
+  display: grid;
+  grid-template-columns: 28px 180px 1fr; // flag | text | bar
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.4rem 0;
+}
+
+.flag-icon {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+}
+
+.language-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.language-level-text {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.level-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.level-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f172a, #64748b);
+  transition: width 2s ease-out;
 }

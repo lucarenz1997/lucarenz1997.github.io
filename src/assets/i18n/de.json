@@ -1,4 +1,8 @@
 {
+  "general": {
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen"
+  },
   "nav": {
     "about": "Über mich",
     "projects": "Tech-Projekte",
@@ -16,44 +20,100 @@
     "focusValue": "Reisen",
     "hobbiesTitle": "Hobbys",
     "connectTitle": "Kontakt",
-    "experienceTitle": "Berufserfahrung"
+    "experienceTitle": "Berufserfahrung",
+    "languagesTitle": "Sprachen",
+    "languageGroups": {
+      "motherTongue": "Muttersprache",
+      "fluent": "Fliessend",
+      "intermediate": "Fortgeschritten"
+    },
+    "languages": {
+      "english": {
+        "name": "Englisch",
+        "level": "Fliessend"
+      },
+      "swiss-german": {
+        "name": "Schweizerdeutsch",
+        "level": "Muttersprache"
+      },
+      "german": {
+        "name": "Deutsch",
+        "level": "Muttersprache"
+      },
+      "spanish": {
+        "name": "Spanisch",
+        "level": "Fortgeschritten"
+      },
+      "french": {
+        "name": "Französisch",
+        "level": "Oui"
+      }
+    }
   },
   "photography": {
     "title": "Fotografie",
     "subtitle": "Einige Eindrücke von Wanderungen, Roadtrips und Surfspots, die ich besucht habe."
   },
   "projects": {
+    "toGithub": "Auf GitHub ansehen",
+    "tech": {
+      "programmingLanguages": "Programmiersprachen",
+      "frameworks": "Frameworks",
+      "libraries": "Bibliotheken",
+      "platforms": "Plattformen"
+    },
+
     "title": "Tech-Projekte",
+
+    "thesis": {
+      "description": "Diese Masterarbeit untersucht Verfahren zur Erkennung von Ausreißern in regulatorischen Daten mit dem Ziel, die Datenqualität zu verbessern und potenzielle Anomalien aufzudecken, die auf Meldefehler oder Unregelmäßigkeiten hinweisen könnten. Die Arbeit vergleicht verschiedene statistische und maschinelle Lernmethoden hinsichtlich ihrer Wirksamkeit und Anwendbarkeit im regulatorischen Umfeld."
+    },
     "nlp": {
-      "description": "Anwendung von NLP-Techniken auf Datensätze mit Freitext-Eingaben."
+      "description": "ADieses Projekt behandelt zentrale Methoden des Natural Language Processing (NLP), indem Modelle zur Textvorverarbeitung, Vektorisierung, Klassifikation und Sentimentanalyse implementiert und evaluiert werden. Es umfasst wichtige Schritte wie Tokenisierung, Stemming/Lemmatisierung, Entfernen von Stoppwörtern sowie Feature-Extraktion mittels Bag-of-Words und TF-IDF. Mehrere Machine-Learning-Algorithmen werden trainiert und hinsichtlich ihrer Leistung in verschiedenen NLP-Aufgaben verglichen. Das Repository bietet damit eine kompakte und praxisorientierte Einführung in die Entwicklung vollständiger NLP-Pipelines zur effizienten Verarbeitung und Interpretation von Textdaten."
     },
     "webScraper": {
-      "description": "Dynamisches Web-Scraping-Tool für drei Schweizer E-Commerce-Plattformen mit Fokus auf Preis- und Produktauswertung."
+      "description": "Dieses Projekt bietet ein einheitliches Scraping-Framework mit drei spezifischen Scrapers für Interdiscount, Digitec und Brack. Jeder Scraper extrahiert Produktinformationen direkt von der jeweiligen Webseite und führt alle Daten in einem gemeinsamen, strukturierten DataFrame zusammen. Das System ermöglicht effiziente Preisvergleiche über die drei Schweizer Händler hinweg und kann genutzt werden, um das günstigste Angebot zu identifizieren. Das Repository dient als praktische Lösung für automatisierte Datensammlung, Marktbeobachtung und preisbasierte Entscheidungen."
+    },
+    "recommender": {
+      "description": "Dieses Projekt entwickelte und verglich mehrere Empfehlungsmodelle für Deezer, beginnend mit Datenanalyse und -bereinigung sowie der Umsetzung von ALS, SVD, Neural Collaborative Filtering und einem Hybrid-NCF-Modell mit zusätzlicher Metadata. Die Modelle wurden mit F1-Score, Precision und Recall bewertet, wobei SVD am besten abschnitt und zeigte, dass einfache Matrixfaktorisierung komplexe neuronale Modelle übertreffen kann. Zudem wurden Empfehlungen zu besserer Metadata, Cold-Start-Lösungen und zur Verbesserung des Nutzererlebnisses abgeleitet."
+    },
+    "time-series": {
+      "description": "Das Projekt untersuchte, ob die Stromerzeugung in den USA aus Erdgas, Öl und Kohle die entsprechenden Futures-Preise beeinflusst. Nach der Aufbereitung und Stationarisierung der Monatsdaten wurden VAR-Modelle und Granger-Kausalitätstests durchgeführt. Die Ergebnisse zeigten keine signifikanten Zusammenhänge, was darauf hindeutet, dass Futures-Preise stärker von externen Marktbedingungen als von der US-Energieproduktion beeinflusst werden."
     }
   },
   "videos": {
     "title": "Videografie",
     "subtitle": "Reiseclips, Wanderungen und Surfsessions, die ich unterwegs gefilmt und geschnitten habe."
   },
- "experience": {
-  "javaSoftwareEngineer": {
-    "location": "SIX Group AG · Zürich, Schweiz",
-    "from": "April 2023",
-    "to": "Januar 2026",
-    "description": "Entwicklung von Backend-Services mit Java und Spring mit Fokus auf saubere Architektur, Tests, Performance und robuste Datenverarbeitung."
-  },
-  "masterAppliedDataScience": {
-    "location": "Universität Luzern · Luzern, Schweiz",
-    "from": "Februar 2024",
-    "to": "Januar 2026",
-    "description": "Vollzeit-Masterstudium bei gleichzeitiger 80%-Anstellung. Masterarbeit bei SIX Group AG zum Thema Ausreissererkennung in Finanzdaten mit Machine Learning."
-  },
-  "graduateProgram": {
-    "location": "SIX Group AG · Zürich, Schweiz",
-    "from": "Oktober 2021",
-    "to": "März 2023",
-    "description": "Rotationsprogramm bei SIX Group AG mit Einsätzen in verschiedenen Teams und Bereichen, Schwerpunkt auf Java/Spring-Backends."
-  }
+  "experience": {
+   "javaSoftwareEngineer": {
+  "title": "Java Software Engineer",
+  "location": "SIX Group AG · Zürich, Schweiz",
+  "from": "April 2023",
+  "to": "Januar 2026",
+  "description": "Arbeit an Backend-Services mit Java und Spring, mit Fokus auf Clean Architecture, Testing, Performance und zuverlässige Datenverarbeitung."
+},
+"masterAppliedDataScience": {
+  "title": "Master in Applied Information and Data Science",
+  "location": "Universität Luzern · Luzern, Schweiz",
+  "from": "Februar 2024",
+  "to": "Januar 2026",
+  "description": "Vollzeit-Masterstudium während einer 80%-Anstellung. Masterarbeit bei der SIX Group AG über Ausreißererkennung in Finanzdaten mittels Machine Learning."
+},
+"graduateProgram": {
+  "title": "Graduate Programm",
+  "location": "SIX Group AG · Zürich, Schweiz",
+  "from": "Oktober 2021",
+  "to": "März 2023",
+  "description": "Rotationsprogramm bei der SIX Group AG mit Einsätzen in verschiedenen Teams und Bereichen wie Frontend (Angular, React), Backend (Java) und IT-Architektur."
+},
+"bachelor": {
+  "title": "Bachelor of Science in Wirtschaftsinformatik",
+  "location": "Fachhochschule Nordwestschweiz · Basel, Schweiz",
+  "from": "September 2018",
+  "to": "September 2021",
+  "description": "Vollzeit-Bachelorstudium mit Austauschsemester in Spanien."
 }
 
+  }
 }

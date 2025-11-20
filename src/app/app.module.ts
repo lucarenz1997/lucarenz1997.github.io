@@ -9,6 +9,7 @@ import { ProjectComponent } from './sections/project/project.component';
 import { VideographyComponent } from './sections/videography/videography.component';
 import { PhotographyComponent } from './sections/photography/photography.component';
 import { MatIconModule } from '@angular/material/icon';
+import { TruncateWordsPipe } from './shared/truncate-words.pipe';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -25,6 +26,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectComponent,
     VideographyComponent,
     PhotographyComponent,
+
+    // Pipes
+    TruncateWordsPipe,
   ],
   imports: [
     BrowserModule,

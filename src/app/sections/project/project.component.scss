@@ -58,6 +58,18 @@
     }
   }
 
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    img.github-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+  }
   .links {
     margin-top: auto;
     display: flex;
@@ -92,7 +104,7 @@
   width: 32px;
   height: 32px;
   color: #0f172a;
-  margin-top: 2px; // align visually with text
+  margin-top: 2px;
 }
 
 .title-group {
@@ -111,4 +123,96 @@
   font-size: 0.9rem;
   line-height: 1.5;
   color: #4b5563;
+}
+.toggle-btn {
+  display: inline-block;
+  width: auto;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  background: transparent;
+  border: 1px solid #0f172a;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #0f172a;
+  margin-top: 0.35rem;
+  transition: all 0.2s ease;
+  align-self: flex-end;
+
+  &:hover {
+    background: #0f172a;
+    color: #ffffff;
+  }
+}
+
+/* Each column */
+.tech-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title with icon */
+.tech-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #475569;
+  margin-bottom: 0.4rem;
+}
+
+.tech-heading-icon {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  .tag {
+    padding: 0.25rem 0.65rem;
+    background: #f8fafc;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    font-size: 0.75rem;
+  }
+}
+/* Adaptive grid that allows up to 4 columns but avoids ugly wrapping */
+.tech-grid {
+  display: grid;
+  gap: 0.5rem;
+
+  /* Auto-fit between 220px and 1fr:
+     - if wide screen → 4 columns
+     - if space gets tight → 3 columns
+     - if tighter → 2 columns
+     - mobile → 1 column
+  */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 0.75rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: #f9fafb;
+  white-space: nowrap;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  .github-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    object-fit: cover;
+  }
 }
