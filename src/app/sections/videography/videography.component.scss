@@ -1,3 +1,25 @@
+.videos {
+  background: radial-gradient(
+    circle at center,
+    #0f172a 0,
+    #020617 55%,
+    #020617 100%
+  );
+  color: #e5e7eb;
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.5rem 2.5rem;
+
+  .section-header h1,
+  .section-header p {
+    color: #e5e7eb;
+  }
+
+  .video-card {
+    background: #020617;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+  }
+}
+
 .section-header {
   margin-bottom: 1.5rem;
 

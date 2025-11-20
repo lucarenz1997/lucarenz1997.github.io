@@ -1,13 +1,25 @@
 <section class="about">
-  <app-about-hero></app-about-hero>
+  <div class="about-hero-band">
+    <app-about-hero></app-about-hero>
+  </div>
 
   <div class="intro-card">
-    <app-about-languages [personalInfo]="info"></app-about-languages>
+    <!-- FULL-WIDTH HEADER -->
+    <app-about-languages-header
+      [personalInfo]="info"
+    ></app-about-languages-header>
 
-    <app-about-side-card
-      [hobbies]="info.hobbies"
-      [social]="info.social"
-    ></app-about-side-card>
+    <!-- TWO COLUMNS UNDERNEATH -->
+    <div class="intro-columns">
+      <app-about-languages
+        [personalInfo]="info"
+      ></app-about-languages>
+
+      <app-about-side-card
+        [hobbies]="info.hobbies"
+        [social]="info.social"
+      ></app-about-side-card>
+    </div>
   </div>
 
   <app-about-experience [experiences]="experiences"></app-about-experience>

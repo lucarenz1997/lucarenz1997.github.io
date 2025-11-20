@@ -8,3 +8,60 @@ body {
   margin: 0;
   background: #f3f4f6;
 }
+
+/* === Global chip/tag system === */
+
+.tag,
+.tags .tag,
+.tags li {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: #f9fafb;
+  white-space: nowrap;
+}
+
+/* layout helper for groups of tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+/* reuse your existing accents */
+.tag--tech,
+.tech-tags li {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+  color: #0369a1;
+}
+
+.tag--skill,
+.skill-tags li {
+  background: #fff7ed;
+  border-color: #fb923c;
+  color: #c2410c;
+}
+
+.card,
+.photo-card,
+.video-card,
+.cv-card,
+.intro-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.photo-card:hover,
+.video-card:hover,
+.cv-card:hover,
+.intro-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+}

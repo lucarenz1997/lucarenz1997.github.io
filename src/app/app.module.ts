@@ -16,7 +16,7 @@ import { AboutSideCardComponent } from './sections/about/subcomponents/sidecard/
 import { AboutExperienceComponent } from './sections/about/subcomponents/experience/about-experience.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import { AboutLanguagesHeaderComponent } from './sections/about/subcomponents/languages/header/about-languages-header.component';
 // factory for loading translation files from /assets/i18n
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutLanguagesComponent,
     AboutSideCardComponent,
     AboutExperienceComponent,
+    AboutLanguagesHeaderComponent,
     ProjectComponent,
     VideographyComponent,
     PhotographyComponent,

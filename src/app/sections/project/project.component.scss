@@ -1,3 +1,9 @@
+// // .projects {
+// //   padding-bottom: 4rem;
+// //   background: radial-gradient(circle at top left, #e0f2fe 0, transparent 55%);
+// //   border-radius: 1.5rem;
+// // }
+
 .section-header {
   margin-bottom: 1.5rem;
 
@@ -167,19 +173,17 @@
   opacity: 0.8;
 }
 
+/* rely on global .tags + .tag */
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-
-  .tag {
-    padding: 0.25rem 0.65rem;
-    background: #f8fafc;
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.6);
-    font-size: 0.75rem;
-  }
+  margin: 0 0 1rem;
 }
+
+/* optional fine-tuning for smaller project tags */
+.tags .tag {
+  font-size: 0.78rem;
+  padding: 0.22rem 0.7rem;
+}
+
 /* Adaptive grid that allows up to 4 columns but avoids ugly wrapping */
 .tech-grid {
   display: grid;
