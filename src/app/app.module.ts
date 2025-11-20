@@ -10,7 +10,10 @@ import { VideographyComponent } from './sections/videography/videography.compone
 import { PhotographyComponent } from './sections/photography/photography.component';
 import { MatIconModule } from '@angular/material/icon';
 import { TruncateWordsPipe } from './shared/truncate-words.pipe';
-
+import { AboutHeroComponent } from './sections/about/subcomponents/hero/about-hero.component';
+import { AboutLanguagesComponent } from './sections/about/subcomponents/languages/about-languages.component';
+import { AboutSideCardComponent } from './sections/about/subcomponents/sidecard/about-side-card.component';
+import { AboutExperienceComponent } from './sections/about/subcomponents/experience/about-experience.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -23,6 +26,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     AboutComponent,
+    AboutHeroComponent,
+    AboutLanguagesComponent,
+    AboutSideCardComponent,
+    AboutExperienceComponent,
     ProjectComponent,
     VideographyComponent,
     PhotographyComponent,

@@ -1,0 +1,47 @@
+<div class="cv-card">
+  <h2>{{ 'about.experienceTitle' | translate }}</h2>
+
+  <div class="cv-list">
+    <article class="cv-item" *ngFor="let exp of experiences">
+      <div class="cv-header">
+        <div class="cv-left">
+          <img
+            *ngIf="exp.logo"
+            [src]="exp.logo"
+            [alt]="exp.company + ' logo'"
+            class="company-logo"
+          />
+
+          <div>
+            <h3>{{ exp.title | translate }}</h3>
+            <p class="company">
+              {{ exp.location | translate }}
+            </p>
+          </div>
+        </div>
+
+        <p class="dates">
+          {{ exp.from | translate }} – {{ exp.to | translate }}
+        </p>
+      </div>
+
+      <p class="cv-description">
+        {{ exp.description | translate }}
+      </p>
+
+      <div class="tag-container">
+        <ul class="tags tech-tags" *ngIf="exp.technologies?.length">
+          <li *ngFor="let tech of exp.technologies">
+            {{ tech | translate }}
+          </li>
+        </ul>
+
+        <ul class="tags skill-tags" *ngIf="exp.skills?.length">
+          <li *ngFor="let skill of exp.skills">
+            {{ skill | translate }}
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</div>

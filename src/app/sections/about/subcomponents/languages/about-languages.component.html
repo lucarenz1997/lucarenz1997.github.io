@@ -1,0 +1,48 @@
+<div class="intro-text">
+  <h1>{{ personalInfo.name }}</h1>
+  <p class="subtitle">{{ 'about.subtitle' | translate }}</p>
+
+  <div class="meta">
+    <div class="meta-item">
+      <span class="label">{{ 'about.ageLabel' | translate }}</span>
+      <span class="value">{{ personalInfo.age }}</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">{{ 'about.focusLabel' | translate }}</span>
+      <span class="value">{{ 'about.focusValue' | translate }}</span>
+    </div>
+  </div>
+
+  <h2>{{ 'about.languagesTitle' | translate }}</h2>
+
+  <ul class="language-list">
+    <li *ngFor="let lang of languages; index as i">
+      <img
+        [src]="lang.flagSrc"
+        [alt]="(lang.nameKey | translate) + ' flag'"
+        class="flag-icon"
+      />
+
+      <div class="language-content">
+        <div class="language-name">
+          {{ lang.nameKey | translate }}
+        </div>
+
+        <div class="language-level-row">
+          <span class="language-level-text">
+            {{ lang.levelKey | translate }}
+          </span>
+        </div>
+      </div>
+
+      <div class="level-bar">
+        <div
+          #langBar
+          class="level-bar-fill"
+          [attr.data-index]="i"
+          [style.width.%]="lang.visible ? lang.proficiency * 100 : 0"
+        ></div>
+      </div>
+    </li>
+  </ul>
+</div>
