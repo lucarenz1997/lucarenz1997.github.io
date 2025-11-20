@@ -31,12 +31,15 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href /
+        run: npm run build -- --configuration production --base-href /lucarenz1997.github.io/
+
+      - name: Add 404.html (SPA routing fix)
+        run: cp dist/lucarenz1997.github.io/index.html dist/lucarenz1997.github.io/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/my-portfolio
+          path: dist/lucarenz1997.github.io
 
   deploy:
     runs-on: ubuntu-latest
