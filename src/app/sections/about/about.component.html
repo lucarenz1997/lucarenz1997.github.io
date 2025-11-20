@@ -1,13 +1,23 @@
 <section class="about">
+<div class="hero">
+  <img src="assets/profile/profile.JPG" alt="Profile" class="hero-photo" />
+
+  <div class="hero-text">
+    <h1>Hey, welcome to my website!</h1>
+    <p>
+      I'm Luca. During the week, I'm a Java Software Engineer —  
+      but on weekends I'm an adventurer wandering through the Swiss Alps  
+      with my camera gear and tent, always chasing new perspectives.
+    </p>
+  </div>
+</div>
+
+
   <div class="intro-card">
     <div class="intro-text">
       <h1>{{ info.name }}</h1>
-      <p class="subtitle">
-        {{ info.title }} · {{ info.location }}
-      </p>
-      <p class="bio">
-        {{ info.bio }}
-      </p>
+      <p class="subtitle">{{ info.title }} · {{ info.location }}</p>
+    
 
       <div class="meta">
         <div class="meta-item">
@@ -28,12 +38,57 @@
       </ul>
 
       <h2>Connect</h2>
-      <div class="social">
-        <a *ngIf="info.social.github" [href]="info.social.github" target="_blank">GitHub</a>
-        <a *ngIf="info.social.linkedin" [href]="info.social.linkedin" target="_blank">LinkedIn</a>
-        <a *ngIf="info.social.instagram" [href]="info.social.instagram" target="_blank">Instagram</a>
-        <a *ngIf="info.social.youtube" [href]="info.social.youtube" target="_blank">YouTube</a>
+      <div class="connect-list">
+        <a [href]="info.social.github" target="_blank">
+          <img src="assets/logos/github-mark.svg" alt="GitHub" />
+          GitHub
+        </a>
+
+        <a [href]="info.social.linkedin" target="_blank">
+          <img src="assets/logos/linkedin.svg" alt="LinkedIn" />
+          LinkedIn
+        </a>
+
+        <a [href]="info.social.instagram" target="_blank">
+          <img src="assets/logos/insta.svg" alt="Instagram" />
+          Instagram
+        </a>
+
+        <a [href]="info.social.youtube" target="_blank">
+          <img src="assets/logos/youtube.svg" alt="YouTube" />
+          YouTube
+        </a>
+
+        <a [href]="'mailto:' + info.social.email">
+          <mat-icon>mail</mat-icon>
+          Email
+        </a>
       </div>
+    </div>
+  </div>
+  <div class="cv-card">
+    <h2>Experience</h2>
+
+    <div class="cv-list">
+      <article class="cv-item" *ngFor="let exp of experiences">
+        <div class="cv-header">
+          <div>
+            <h3>{{ exp.title }}</h3>
+            <p class="company">{{ exp.company }} · {{ exp.location }}</p>
+          </div>
+          <p class="dates">{{ exp.from }} – {{ exp.to }}</p>
+        </div>
+
+        <p class="cv-description">
+          {{ exp.description }}
+        </p>
+
+        <ul class="tags skill-tags" *ngIf="exp.skills && exp.skills.length">
+          <li *ngFor="let skill of exp.skills">
+            {{ skill }}
+          </li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>

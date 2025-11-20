@@ -4,19 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './sections/about/about.component';
-import { ProjectsComponent } from './sections/projects/projects.component';
+import { ProjectComponent } from './sections/project/project.component';
 import { VideographyComponent } from './sections/videography/videography.component';
 import { PhotographyComponent } from './sections/photography/photography.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ProjectsComponent,
+    ProjectComponent,
     VideographyComponent,
     PhotographyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

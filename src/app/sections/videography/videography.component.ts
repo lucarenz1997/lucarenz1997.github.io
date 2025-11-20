@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { VIDEOS, Video } from '../../data/videos';
+import { VIDEOS, Video } from '../../data/video';
 
 interface VideoVM {
   title: string;

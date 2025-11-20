@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PERSONAL_INFO } from '../../data/personal-data';
+import { EXPERIENCES, Experience } from '../../data/experience';
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,5 @@ import { PERSONAL_INFO } from '../../data/personal-data';
 })
 export class AboutComponent {
   info = PERSONAL_INFO;
+  experiences: Experience[] = EXPERIENCES;
 }

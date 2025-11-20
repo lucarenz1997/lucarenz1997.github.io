@@ -1,4 +1,36 @@
 .about {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+  }
+
+  .hero-text p {
+    max-width: 650px;
+    line-height: 1.65;
+    color: #4b5563;
+    font-size: 1.05rem;
+  }
+
   .intro-card {
     display: grid;
     grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
@@ -101,5 +133,117 @@
 @media (max-width: 768px) {
   .about .intro-card {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+.connect-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem; // spacing between buttons
+}
+
+.connect-list a {
+  display: inline-flex; // compact pill, NOT full width
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #0f172a;
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 0.85rem;
+
+  background: #ffffff;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.connect-list img {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px; // makes logos look clean
+  object-fit: cover;
+}
+
+.connect-list a:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.connect-list a:hover img {
+  filter: brightness(0) invert(1); // white icon on dark hover
+}
+
+.cv-card {
+  margin-top: 1.75rem;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.cv-item {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.cv-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.company {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.dates {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.cv-description {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dates {
+    margin-top: 0.2rem;
   }
 }
