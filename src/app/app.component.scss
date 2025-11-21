@@ -163,19 +163,6 @@
   color: #ffffff;
 }
 
-.tag,
-.tags .tag,
-.tags li,
-.tags span {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8rem;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: #f9fafb;
-}
-
 /* ----- header toggle: hidden on desktop ----- */
 .header-toggle {
   display: none; // desktop
