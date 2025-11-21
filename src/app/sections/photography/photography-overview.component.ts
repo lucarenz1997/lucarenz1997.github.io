@@ -107,7 +107,7 @@ export class PhotographyOverviewComponent {
     return list[this.selectedIndex] ?? null;
   }
 
-  // ----- lightbox -----
+  // ---- lightbox ----
 
   openPhoto(index: number) {
     this.selectedIndex = index;
