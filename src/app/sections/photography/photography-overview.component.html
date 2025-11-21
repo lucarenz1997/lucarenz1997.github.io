@@ -1,0 +1,115 @@
+<section class="photos-overview wide">
+  <!-- HERO -->
+  <div class="photos-hero">
+    <div class="photos-hero-overlay">
+      <h1>{{ 'photography.title' | translate }}</h1>
+      <p>{{ 'photography.subtitle' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- ALBUMS TITLE + SUBTITLE -->
+  <div class="photos-section-header">
+    <h2>{{ 'photography.album.title' | translate }}</h2>
+    <p>{{ 'photography.album.subtitle' | translate }}</p>
+  </div>
+
+  <!-- ALBUMS GRID -->
+  <div class="albums-grid">
+    <a
+      *ngFor="let album of albums"
+      class="album-card"
+      [routerLink]="['/photography', album.id]"
+    >
+      <div class="album-cover">
+        <img
+          [src]="album.coverSrc"
+          [alt]="album.titleKey | translate"
+          loading="lazy"
+        />
+        <div class="album-cover-overlay">
+          <h2>{{ album.titleKey | translate }}</h2>
+          <p class="album-meta">
+            <ng-container *ngIf="album.location">
+              {{ album.location }}
+            </ng-container>
+            <ng-container *ngIf="album.location && album.year">
+              ·
+            </ng-container>
+            <ng-container *ngIf="album.year">
+              {{ album.year }}
+            </ng-container>
+          </p>
+        </div>
+      </div>
+
+      <div class="album-body">
+        <p class="album-description" *ngIf="album.descriptionKey">
+          {{ album.descriptionKey | translate }}
+        </p>
+        <div class="album-footer">
+          <span class="album-count">
+            {{ album.photoCount }} {{ 'photography.album.photosLabel' | translate }}
+          </span>
+          <span class="album-link">
+            {{ 'photography.album.view' | translate }}
+          </span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- ALL PHOTOS TITLE + SUBTITLE -->
+  <div class="photos-section-header">
+    <h2>{{ 'photography.photos.title' | translate }}</h2>
+    <p>{{ 'photography.photos.subtitle' | translate }}</p>
+  </div>
+
+  <!-- CATEGORY FILTER BAR -->
+  <div class="photo-filter" *ngIf="categories.length">
+    <button
+      class="tag tag--filter"
+      [class.tag--filter-active]="!activeCategories.length"
+      (click)="clearFilters()"
+      type="button"
+    >
+      {{ 'photography.filter.all' | translate }}
+    </button>
+
+    <button
+      *ngFor="let cat of categories"
+      class="tag tag--filter"
+      [class.tag--filter-active]="isCategoryActive(cat)"
+      (click)="toggleCategory(cat)"
+      type="button"
+    >
+      {{ cat | translate }}
+    </button>
+  </div>
+
+  <!-- MASONRY GRID OF ALL PHOTOS -->
+  <div class="photo-grid">
+    <figure
+      *ngFor="let photo of filteredPhotos"
+      class="photo-card"
+    >
+      <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+      <figcaption>
+        <div class="caption-main">{{ photo.alt }}</div>
+        <div class="caption-sub">
+          <span *ngIf="photo.location">{{ photo.location }}</span>
+          <span *ngIf="photo.location && photo.year">·</span>
+          <span *ngIf="photo.year">{{ photo.year }}</span>
+        </div>
+
+        <div class="caption-chips" *ngIf="photo.categories?.length">
+          <span
+            class="tag tag--category"
+            *ngFor="let cat of photo.categories"
+          >
+            {{ cat | translate }}
+          </span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,132 @@
+<section class="photos-album wide" *ngIf="album">
+  
+  <!-- HERO PER ALBUM -->
+  <div
+    class="photos-hero"
+    [ngStyle]="{ 'background-image': 'url(' + album.coverSrc + ')' }"
+  >
+    <div class="photos-hero-overlay">
+      <button
+        class="back-link"
+        type="button"
+        [routerLink]="['/photography']"
+      >
+        ← {{ 'photography.backToOverview' | translate }}
+      </button>
+
+      <h1>{{ album.titleKey | translate }}</h1>
+
+      <p class="album-meta">
+        <span *ngIf="album.location">{{ album.location }}</span>
+        <span *ngIf="album.location && album.year">·</span>
+        <span *ngIf="album.year">{{ album.year }}</span>
+      </p>
+
+      <p class="album-description" *ngIf="album.descriptionKey">
+        {{ album.descriptionKey | translate }}
+      </p>
+    </div>
+  </div>
+
+  <!-- CATEGORY FILTER BAR -->
+  <div class="photo-filter" *ngIf="categories.length">
+    <button
+      class="tag tag--filter"
+      [class.tag--filter-active]="!activeCategories.length"
+      (click)="clearFilters()"
+      type="button"
+    >
+      {{ 'photography.filter.all' | translate }}
+    </button>
+
+    <button
+      *ngFor="let cat of categories"
+      class="tag tag--filter"
+      [class.tag--filter-active]="isCategoryActive(cat)"
+      (click)="toggleCategory(cat)"
+      type="button"
+    >
+      {{ cat | translate }}
+    </button>
+  </div>
+
+  <!-- MASONRY GRID -->
+  <div class="photo-grid">
+    <figure
+      *ngFor="let photo of filteredPhotos; index as i"
+      class="photo-card"
+      (click)="openPhoto(i)"
+    >
+      <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+      <figcaption>
+        <div class="caption-main">{{ photo.alt }}</div>
+        <div class="caption-sub">
+          <span *ngIf="photo.location">{{ photo.location }}</span>
+          <span *ngIf="photo.location && photo.year">·</span>
+          <span *ngIf="photo.year">{{ photo.year }}</span>
+        </div>
+
+        <div class="caption-chips" *ngIf="photo.categories?.length">
+          <span
+            class="tag tag--category"
+            *ngFor="let cat of photo.categories"
+          >
+            {{ cat | translate }}
+          </span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div
+    class="lightbox-backdrop"
+    *ngIf="selectedPhoto as photo"
+    (click)="closePhoto()"
+  >
+    <div
+      class="lightbox-dialog"
+      (click)="$event.stopPropagation()"
+      (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)"
+    >
+      <button class="lightbox-close" (click)="closePhoto()">&times;</button>
+
+      <button class="lightbox-arrow left" (click)="prevPhoto()">‹</button>
+      <button class="lightbox-arrow right" (click)="nextPhoto()">›</button>
+
+      <div class="lightbox-image-wrapper">
+        <img [src]="photo.src" [alt]="photo.alt" />
+
+        <div class="lightbox-meta">
+          <h2>{{ photo.alt }}</h2>
+
+          <p class="meta-line">
+            <ng-container *ngIf="photo.location">
+              {{ photo.location }}
+            </ng-container>
+            <ng-container *ngIf="photo.location && photo.year">
+              ·
+            </ng-container>
+            <ng-container *ngIf="photo.year">
+              {{ photo.year }}
+            </ng-container>
+          </p>
+
+          <div class="meta-chips" *ngIf="photo.categories?.length">
+            <span
+              class="tag tag--category"
+              *ngFor="let cat of photo.categories"
+            >
+              {{ cat | translate }}
+            </span>
+          </div>
+
+          <p class="description" *ngIf="photo.description">
+            {{ photo.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

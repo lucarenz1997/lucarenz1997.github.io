@@ -1,13 +1,39 @@
 {
-    "photo":{
-         "filter": {
-      "all": "All"
+  "photography": {
+    "title": "Photography",
+    "subtitle": "A few frames from hikes, road trips, and surf destinations that I’ve visited.",
+    "backToOverview": "Back to overview",
+    "album": {
+      "photosLabel": "Photos",
+      "title": "Albums",
+      "subtitle": "Collections of my favorite adventures, grouped by places and moments that shaped each journey.",
+      "all": "All Albums",
+      "view": "View",
+      "switzerlandMountains": {
+        "title": "Swiss Mountains",
+        "description": "Hikes, ridges and drone shots from the Alps."
+      },
+      "indonesia":{
+        "title": "Indonesia",
+        "description": "4 week vacation on Java, Karimunjawa, Bali and Lombok"
+      }
+    },
+    "photos": {
+      "title": "Photos",
+      "subtitle": "A curated selection of individual shots, filtered by category to explore specific styles or moods."
+    },
+    "filter": {
+      "all": "All photos"
     },
     "category": {
-      "mountains":"Mountains",
-      "portrait":"Portraits"
+      "mountains": "Mountains",
+      "portrait": "Portraits",
+      "aerial": "Aerial",
+      "sunset":"Sunset",
+      "camping":"Camping"
     }
   },
+
   "tech": {
     "java": "Java",
     "spring": "Spring",
@@ -105,10 +131,6 @@
         "level": "Oui"
       }
     }
-  },
-  "photography": {
-    "title": "Photography",
-    "subtitle": "A few frames from hikes, road trips, and surf destinations that I’ve visited."
   },
   "projects": {
     "toGithub": "View on GitHub",

@@ -1,11 +1,36 @@
 {
-  "photo":{
+ "photography": {
+    "title": "Fotografie",
+    "subtitle": "Einige Aufnahmen von Wanderungen, Roadtrips und Surf-Destinationen, die ich besucht habe.",
+    "backToOverview": "Zur Übersicht",
+    "album": {
+      "photosLabel": "Fotos",
+      "title": "Alben",
+      "subtitle": "Sammlungen meiner liebsten Abenteuer, gruppiert nach Orten und Momenten, die jede Reise geprägt haben.",
+      "all": "Alle Alben",
+      "view": "Ansehen",
+      "switzerlandMountains": {
+        "title": "Schweizer Berge",
+        "description": "Wanderungen, Grate und Drohnenaufnahmen aus den Alpen."
+      },
+      "indonesia": {
+        "title": "Indonesien",
+        "description": "4-wöchige Reise durch Java, Karimunjawa, Bali und Lombok"
+      }
+    },
+    "photos": {
+      "title": "Fotos",
+      "subtitle": "Eine kuratierte Auswahl einzelner Aufnahmen, gefiltert nach Kategorien, um bestimmte Stile oder Stimmungen zu entdecken."
+    },
     "filter": {
-      "all": "Alle"
+      "all": "Alle Fotos"
     },
     "category": {
-      "mountains":"Berge",
-      "portrait": "Porträt"
+      "mountains": "Berge",
+      "portrait": "Porträts",
+      "aerial": "Luftaufnahmen",
+      "sunset": "Sonnenuntergang",
+      "camping": "Camping"
     }
   },
   "tech": {
@@ -106,10 +131,6 @@
         "level": "Oui"
       }
     }
-  },
-  "photography": {
-    "title": "Fotografie",
-    "subtitle": "Einige Eindrücke von Wanderungen, Roadtrips und Surfspots, die ich besucht habe."
   },
   "projects": {
     "toGithub": "Auf GitHub ansehen",

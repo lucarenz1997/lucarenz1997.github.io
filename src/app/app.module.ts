@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './sections/about/about.component';
 import { ProjectComponent } from './sections/project/project.component';
 import { VideographyComponent } from './sections/videography/videography.component';
-import { PhotographyComponent } from './sections/photography/photography.component';
 import { MatIconModule } from '@angular/material/icon';
 import { TruncateWordsPipe } from './shared/truncate-words.pipe';
 import { AboutHeroComponent } from './sections/about/subcomponents/hero/about-hero.component';
@@ -17,6 +16,9 @@ import { AboutExperienceComponent } from './sections/about/subcomponents/experie
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AboutLanguagesHeaderComponent } from './sections/about/subcomponents/languages/header/about-languages-header.component';
+import { PhotographyOverviewComponent } from './sections/photography/photography-overview.component';
+import { PhotographyAlbumComponent } from './sections/photography/photography-album.component';
+
 // factory for loading translation files from /assets/i18n
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,7 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutLanguagesHeaderComponent,
     ProjectComponent,
     VideographyComponent,
-    PhotographyComponent,
+    PhotographyOverviewComponent,
+    PhotographyAlbumComponent,
 
     // Pipes
     TruncateWordsPipe,
