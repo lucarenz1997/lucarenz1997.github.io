@@ -1,5 +1,5 @@
 // src/app/sections/photography/photography-overview.component.ts
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ALBUMS, PhotoAlbum } from '../../data/photo-albums';
 import { PHOTOS, Photo } from '../../data/photo';
 
@@ -24,6 +24,16 @@ export class PhotographyOverviewComponent {
   // global categories across *all* photos
   categories: string[] = this.buildCategories(this.allPhotos);
   activeCategories: string[] = [];
+
+  // show/hide info toggle (grid + lightbox)
+  showInfo = false;
+
+  // lightbox state
+  selectedIndex: number | null = null;
+
+  // swipe
+  private touchStartX: number | null = null;
+  private touchStartY: number | null = null;
 
   // ----- albums -----
   private buildAlbumsWithCounts(
@@ -55,10 +65,17 @@ export class PhotographyOverviewComponent {
     } else {
       this.activeCategories = [...this.activeCategories, cat];
     }
+    // close any open lightbox when filters change
+    this.selectedIndex = null;
   }
 
   clearFilters() {
     this.activeCategories = [];
+    this.selectedIndex = null;
+  }
+
+  toggleShowInfo() {
+    this.showInfo = !this.showInfo;
   }
 
   // ----- filtered photos for overview grid -----
@@ -81,5 +98,80 @@ export class PhotographyOverviewComponent {
       const bm = b.month ?? 0;
       return bm - am;
     });
+  }
+
+  get selectedPhoto(): Photo | null {
+    if (this.selectedIndex === null) return null;
+    const list = this.filteredPhotos;
+    if (!list.length) return null;
+    return list[this.selectedIndex] ?? null;
+  }
+
+  // ----- lightbox -----
+
+  openPhoto(index: number) {
+    this.selectedIndex = index;
+  }
+
+  closePhoto() {
+    this.selectedIndex = null;
+  }
+
+  nextPhoto() {
+    if (this.selectedIndex === null) return;
+    const list = this.filteredPhotos;
+    if (!list.length) return;
+    this.selectedIndex = (this.selectedIndex + 1) % list.length;
+  }
+
+  prevPhoto() {
+    if (this.selectedIndex === null) return;
+    const list = this.filteredPhotos;
+    if (!list.length) return;
+    this.selectedIndex = (this.selectedIndex - 1 + list.length) % list.length;
+  }
+
+  // ----- keyboard nav -----
+  @HostListener('window:keydown', ['$event'])
+  handleKeydown(event: KeyboardEvent) {
+    if (this.selectedIndex === null) return;
+
+    if (event.key === 'Escape') {
+      this.closePhoto();
+    } else if (event.key === 'ArrowRight') {
+      this.nextPhoto();
+    } else if (event.key === 'ArrowLeft') {
+      this.prevPhoto();
+    }
+  }
+
+  // ----- swipe -----
+  onTouchStart(event: TouchEvent) {
+    if (!this.selectedPhoto) return;
+    const touch = event.touches[0];
+    this.touchStartX = touch.clientX;
+    this.touchStartY = touch.clientY;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    if (this.touchStartX === null || this.touchStartY === null) return;
+    const touch = event.changedTouches[0];
+    const dx = touch.clientX - this.touchStartX;
+    const dy = touch.clientY - this.touchStartY;
+
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+    const SWIPE_THRESHOLD = 50;
+
+    if (absDx > SWIPE_THRESHOLD && absDx > absDy) {
+      if (dx < 0) {
+        this.nextPhoto();
+      } else {
+        this.prevPhoto();
+      }
+    }
+
+    this.touchStartX = null;
+    this.touchStartY = null;
   }
 }

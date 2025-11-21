@@ -20,7 +20,9 @@
     },
     "photos": {
       "title": "Photos",
-      "subtitle": "A curated selection of individual shots, filtered by category to explore specific styles or moods."
+      "subtitle": "A curated selection of individual shots, filtered by category to explore specific styles or moods.",
+      "showInfo":"Show Metadata",
+      "hideInfo":"Hide Metadata"
     },
     "filter": {
       "all": "All photos"

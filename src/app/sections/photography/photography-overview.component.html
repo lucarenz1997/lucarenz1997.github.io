@@ -64,36 +64,56 @@
     <p>{{ 'photography.photos.subtitle' | translate }}</p>
   </div>
 
-  <!-- CATEGORY FILTER BAR -->
-  <div class="photo-filter" *ngIf="categories.length">
-    <button
-      class="tag tag--filter"
-      [class.tag--filter-active]="!activeCategories.length"
-      (click)="clearFilters()"
-      type="button"
-    >
-      {{ 'photography.filter.all' | translate }}
-    </button>
+   <!-- CATEGORY FILTER BAR + INFO TOGGLE -->
+  <div class="photo-filter-row" *ngIf="categories.length">
+    <div class="photo-filter">
+      <button
+        class="tag tag--filter"
+        [class.tag--filter-active]="!activeCategories.length"
+        (click)="clearFilters()"
+        type="button"
+      >
+        {{ 'photography.filter.all' | translate }}
+      </button>
+
+      <button
+        *ngFor="let cat of categories"
+        class="tag tag--filter"
+        [class.tag--filter-active]="isCategoryActive(cat)"
+        (click)="toggleCategory(cat)"
+        type="button"
+      >
+        {{ cat | translate }}
+      </button>
+    </div>
 
     <button
-      *ngFor="let cat of categories"
-      class="tag tag--filter"
-      [class.tag--filter-active]="isCategoryActive(cat)"
-      (click)="toggleCategory(cat)"
       type="button"
+      class="info-toggle"
+      (click)="toggleShowInfo()"
     >
-      {{ cat | translate }}
+      <span class="info-toggle-label">
+        {{ showInfo ? ('photography.photos.hideInfo' | translate) : ('photography.photos.showInfo' | translate) }}
+      </span>
+      <span
+        class="info-toggle-switch"
+        [class.info-toggle-switch--on]="showInfo"
+      >
+        <span class="info-toggle-thumb"></span>
+      </span>
     </button>
   </div>
 
-  <!-- MASONRY GRID OF ALL PHOTOS -->
+   <!-- MASONRY GRID OF ALL PHOTOS -->
   <div class="photo-grid">
     <figure
-      *ngFor="let photo of filteredPhotos"
+      *ngFor="let photo of filteredPhotos; index as i"
       class="photo-card"
+      (click)="openPhoto(i)"
     >
       <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
-      <figcaption>
+
+      <figcaption *ngIf="showInfo">
         <div class="caption-main">{{ photo.alt }}</div>
         <div class="caption-sub">
           <span *ngIf="photo.location">{{ photo.location }}</span>
@@ -111,5 +131,56 @@
         </div>
       </figcaption>
     </figure>
+  </div>
+ <!-- LIGHTBOX -->
+  <div
+    class="lightbox-backdrop"
+    *ngIf="selectedPhoto as photo"
+    (click)="closePhoto()"
+  >
+    <div
+      class="lightbox-dialog"
+      (click)="$event.stopPropagation()"
+      (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)"
+    >
+      <button class="lightbox-close" (click)="closePhoto()">&times;</button>
+
+      <button class="lightbox-arrow left" (click)="prevPhoto()">‹</button>
+      <button class="lightbox-arrow right" (click)="nextPhoto()">›</button>
+
+      <div class="lightbox-image-wrapper">
+        <img [src]="photo.src" [alt]="photo.alt" />
+
+        <div class="lightbox-meta" *ngIf="showInfo">
+          <h2>{{ photo.alt }}</h2>
+
+          <p class="meta-line">
+            <ng-container *ngIf="photo.location">
+              {{ photo.location }}
+            </ng-container>
+            <ng-container *ngIf="photo.location && photo.year">
+              ·
+            </ng-container>
+            <ng-container *ngIf="photo.year">
+              {{ photo.year }}
+            </ng-container>
+          </p>
+
+          <div class="meta-chips" *ngIf="photo.categories?.length">
+            <span
+              class="tag tag--category"
+              *ngFor="let cat of photo.categories"
+            >
+              {{ cat | translate }}
+            </span>
+          </div>
+
+          <p class="description" *ngIf="photo.description">
+            {{ photo.description }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

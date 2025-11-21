@@ -22,6 +22,9 @@ export class PhotographyAlbumComponent implements OnDestroy {
 
   selectedIndex: number | null = null;
 
+  // NEW: global info toggle for this album
+  showInfo = false;
+
   private routeSub?: Subscription;
 
   // swipe
@@ -113,6 +116,12 @@ export class PhotographyAlbumComponent implements OnDestroy {
 
   clearFilters() {
     this.activeCategories = [];
+    this.selectedIndex = null;
+  }
+
+  // NEW: info toggle
+  toggleShowInfo() {
+    this.showInfo = !this.showInfo;
   }
 
   // ----- keyboard nav -----
